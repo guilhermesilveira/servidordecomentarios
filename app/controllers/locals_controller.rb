@@ -16,7 +16,6 @@ class LocalsController < ApplicationController
     @local = Local.new(local_params)
 
     if @local.save
-      redirect_to @local, notice: 'Local criado com sucesso.'
     else
       render json: @comentario.errors, status: :unprocessable_entity
     end

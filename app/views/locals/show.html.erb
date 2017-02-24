@@ -1,9 +1,5 @@
-<p id="notice"><%= notice %></p>
-
 <ul>
-    <% @local.comentarios.each do |comentario| %>
-      <li><%= comentario.autor %>: <%= comentario.texto %></li>
+    <% @local.comentarios.each do |c| %>
+      <li><%= c.autor %>: <%= c.texto %></li>
     <% end %>
 </ul>
-
-<p><%= @local.id %></p>

@@ -15,7 +15,7 @@ class ComentariosController < ApplicationController
     puts "fim"
 
     if @comentario.save
-      redirect_to @comentario.local, notice: 'Comentário gravado com sucesso.'
+      redirect_to @comentario.local
     else
       render json: @comentario.errors, status: :unprocessable_entity
     end
