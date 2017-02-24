@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'comentario', to: 'comentarios#create'
   resources :locals
-  root to: 'locals#index'
+  root to: 'locals#create'
 end

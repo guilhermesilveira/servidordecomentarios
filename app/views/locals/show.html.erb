@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_local_path(@local) %> |
-<%= link_to 'Back', locals_path %>
+<ul>
+    <% @local.comentarios.each do |comentario| %>
+      <li><%= comentario.autor %>: <%= comentario.texto %></li>
+    <% end %>
+</ul>
+
+<p><%= @local.id %></p>
