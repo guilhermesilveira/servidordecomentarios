@@ -9,7 +9,7 @@ class LocalsController < ApplicationController
   # POST /locals
   # POST /locals.json
   def create
-    Local.where("created_at < :ultimo_mes", {ultimo_mes: 1.second.ago}).each do |local|
+    Local.where("created_at < :ultimo_mes", {ultimo_mes: 1.month.ago}).each do |local|
       local.comentarios.destroy_all
       local.destroy
     end
