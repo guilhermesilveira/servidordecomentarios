@@ -1,5 +1,9 @@
 <ul>
-    <% @local.comentarios.each do |c| %>
-      <li><%= c.autor %>: <%= c.texto %></li>
-    <% end %>
+	<% if @local.comentarios.size == 0 %>
+		<li>Nenhum comentário</li>
+	<% else %>
+	    <% @local.comentarios.each do |c| %>
+	      <li><%= c.autor %>: <%= c.texto %></li>
+	    <% end %>
+	<% end %>
 </ul>
